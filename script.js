@@ -10,7 +10,7 @@ button.addEventListener('click', () => {
 
 function promptPadsCount () {
     let padsCount;
-    const PADS_MAX = 50;
+    const PADS_MAX = 64;
 
     do {
         padsCount = +prompt(`Enter new grid size (max - ${PADS_MAX})`)
