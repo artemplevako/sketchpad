@@ -1,6 +1,24 @@
 const pads = document.querySelector('.pads');
 createPads(16);
 
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    removePads();
+    const count = promptPadsCount();
+    createPads(count);
+});
+
+function promptPadsCount () {
+    let padsCount;
+    const PADS_MAX = 50;
+
+    do {
+        padsCount = +prompt(`Enter new grid size (max - ${PADS_MAX})`)
+    } while (!padsCount || padsCount > PADS_MAX);
+
+    return padsCount;
+}
+
 function removePads () {
     while (pads.firstChild) {
         pads.removeChild(pads.firstChild);
