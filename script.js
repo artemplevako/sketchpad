@@ -30,7 +30,9 @@ function createPads (count) {
         const pad = document.createElement('div');
         pads.appendChild(pad);
         pad.style.width = (1 / count * 100) + '%';
-        pad.style.height = getComputedStyle(pad).getPropertyValue('width');
+        pad.style.height = pads.childNodes.length === 1 ?
+                getComputedStyle(pad).getPropertyValue('width') :
+                pads.firstChild.style.height;
         pad.style.background = 'white';
         pad.addEventListener('mouseenter', e => updatePadColor(e.target));
     }
