@@ -39,5 +39,12 @@ function createPads (count) {
 }
 
 function updatePadColor (pad) {
-    pad.style.background = 'black';
+    const hue = random(360);
+    const saturation = '100%';
+    const lightness = '50%';
+    pad.style.background = `hsl(${hue}, ${saturation}, ${lightness})`;
+}
+
+function random (limit) {
+    return Math.floor(Math.random() * limit);
 }
