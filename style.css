@@ -13,3 +13,11 @@ header {
     align-items: center;
     padding: 0 20px;
 }
+
+.pads {
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
