@@ -19,8 +19,3 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
-
-.pad {
-    background: white;
-    filter: brightness(100%);
-}
