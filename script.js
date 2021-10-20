@@ -31,5 +31,6 @@ function createPads (count) {
         pads.appendChild(pad);
         pad.style.width = (1 / count * 100) + '%';
         pad.style.height = getComputedStyle(pad).getPropertyValue('width');
+        pad.classList.add('pad');
     }
 }
